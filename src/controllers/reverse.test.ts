@@ -13,7 +13,7 @@ describe("Object Reverse Controller", () => {
     const req = getMockReq();
     reversePostController(req, res, next);
 
-    expect(res.status).toBeCalledWith(400);
+    expect(res.sendStatus).toBeCalledWith(400);
   });
 
   it("should respond with an object in the body with the keys reversed", () => {

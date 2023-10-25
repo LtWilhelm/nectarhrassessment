@@ -1,8 +1,8 @@
 import { RequestHandler } from "express";
 
 export const reversePostController: RequestHandler = (req, res) => {
-  // If no body is provided, reject the request with code 400
-  if (!Object.keys(req.body).length) return res.status(400);
+  // If no body is provided or is empty, reject the request with code 400
+  if (!req.body || !Object.keys(req.body).length) return res.sendStatus(400);
   // Create new object to hold new keys and values
   const reversed: Record<string, string> = {};
 
