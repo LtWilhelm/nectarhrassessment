@@ -34,6 +34,7 @@
       background-color: #101025;
       background-image: url('https://ltwilhelm.github.io/spooky-scary-skeletons/assets/images/haunted_house.png');
       background-position: bottom right;
+      background-attachment: fixed;
       background-repeat: no-repeat;
       background-size: contain;
       min-height: 100vh;
@@ -42,9 +43,8 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-      padding: 1rem;
+      gap: 2rem;
+      padding: 2rem;
       background: #00000050;
 
       border-image-source: url('https://ltwilhelm.github.io/spooky-scary-skeletons/assets/images/border.png');
@@ -60,6 +60,13 @@
       color: orange;
       text-shadow: 1px 1px 0 purple;
       font-size: 4rem;
+      margin: 0;
+    }
+
+    @media screen and (min-width: 480px) {
+      .grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
   </style>
 </head>
