@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <!-- Inlining the styles since there are so few -->
+  <style>
+    @font-face {
+      font-family: 'spk';
+      src: url('https://ltwilhelm.github.io/spooky-scary-skeletons/assets/fonts/SpookyPixelFont-Regular.otf');
+    }
+
+    * {
+      font-family: 'spk', sans-serif;
+      image-rendering: optimizeSpeed;
+      /* Older versions of FF          */
+      image-rendering: -moz-crisp-edges;
+      /* FF 6.0+                       */
+      image-rendering: -webkit-optimize-contrast;
+      /* Safari                        */
+      image-rendering: -o-crisp-edges;
+      /* OS X & Windows Opera (12.02+) */
+      image-rendering: pixelated;
+      /* Awesome future-browsers       */
+      -ms-interpolation-mode: nearest-neighbor;
+      /* IE  */
+
+    }
+
+    body {
+      padding: 2rem;
+      background-color: #101025;
+      background-image: url('https://ltwilhelm.github.io/spooky-scary-skeletons/assets/images/haunted_house.png');
+      background-position: bottom right;
+      background-repeat: no-repeat;
+      background-size: contain;
+      min-height: 100vh;
+
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      padding: 1rem;
+      background: #00000050;
+
+      border-image-source: url('https://ltwilhelm.github.io/spooky-scary-skeletons/assets/images/border.png');
+      border-image-slice: 4;
+      border-image-width: 10px;
+      border-image-outset: 5px;
+      margin: 10px;
+      border-radius: 0;
+    }
+
+    p {
+      text-align: center;
+      color: orange;
+      text-shadow: 1px 1px 0 purple;
+      font-size: 4rem;
+    }
+  </style>
+</head>
+
+<body>
+  {{}}
+</body>
+
+</html>

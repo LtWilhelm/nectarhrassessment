@@ -78,11 +78,14 @@ const getStateLatLon = async (state: string) => {
 export const getForecastForState = async (state: string) => {
   const { lat, lon } = await getStateLatLon(state);
 
+  const headers = new Headers();
+  headers.set("User-Agent", "(TechAssessment, emma@cyborggrizzly.com)");
+
   const url = new URL(`https://api.weather.gov/points/${lat},${lon}`);
 
-  const pointRes = await fetch(url);
+  const pointRes = await fetch(url, { headers });
   const pointJson = await pointRes.json() as WeatherPointQueryResult;
 
-  const forecastRes = await fetch(pointJson.properties.forecast);
+  const forecastRes = await fetch(pointJson.properties.forecast, { headers });
   return await forecastRes.json();
 };
