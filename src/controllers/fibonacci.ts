@@ -21,7 +21,7 @@ export const fibonacciGetController = async (
   res.send(template);
 };
 
-function* fibonacciGenerator(length = 100) {
+export function* fibonacciGenerator(length = 100) {
   const collector = [0, 1];
   for (let i = 0; i < length; i++) {
     collector.push(collector.reduce((a, b) => a + b));

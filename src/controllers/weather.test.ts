@@ -18,7 +18,7 @@ describe("Weather API Controller", () => {
   it("should respond with an object containing forecast data", async () => {
     const req = getMockReq({
       params: {
-        q: "UT",
+        state: "UT",
       },
     });
 
